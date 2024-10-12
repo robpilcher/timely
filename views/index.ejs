@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMELY</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link href="/styles/styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="getData" method="POST">
+        <div class="headingDiv">
+            <h3>Matter Number</h3>
+            <input type="text" placeholder="Matter Number" autocomplete="off" name="matterNumber" required id="matterNumber">
+            <h3>Matter Name</h3>
+            <input type="text" placeholder="Matter Name" autocomplete="off" name="matterName" disabled id="matterName">
+            <h3>Supervising Fee Earner</h3>
+            <input type="text" placeholder="Fee Earner" autocomplete="off" name="feeEarner" disabled id="feeEarner">
+            <h3>Department</h3>
+            <input type="text" placeholder="Department" autocomplete="off" name="deptName" disabled id="deptName">
+            <input type="submit" value="Get Data" class="getDataBtn">
+            <img src="/images/favicon.png">
+        </div>
+    </form>
+    <div class="tabDiv">
+        <h3 id="billAnalysis">Invoice Analysis</h3>
+        <h3>Flexible Pricing</h3>
+        <h3>Rates Management</h3>
+    </div>
+    <div class="mainDiv">
+        <div class="existingDiv">
+            <div class="borderBottom">
+                <h4>Existing Billings</h4>
+            </div>
+            <div class="dataDiv">
+                <h4>Fees at Worked Value:</h4>
+                <input type="text" id="existWorkVal">
+                <h4>Write Down %:</h4>
+                <input type="text" id="writeDown">
+                <h4>Billed Fees:</h4>
+                <input type="text" id="existBilVal">
+                <h4>Costs:</h4>
+                <input type="text" id="existBilCost">
+                <h4>CP £:</h4>
+                <input type="text" id="cp£">
+                <h4>CP %:</h4>
+                <input type="text" id="cp%">
+            </div>
+        </div>
+        <div class="invoiceDiv">
+            <div class="borderBottom">
+                <h4>Invoice</h4>
+            </div>
+            <div class="dataDiv">
+                <h4>Fees at Worked Value:</h4>
+                <input type="text" id="invoiceWorkVal">
+                <h4>Write Down %:</h4>
+                <input type="text" id="invoiceWriteDown">
+                <h4>Billed Fees:</h4>
+                <input type="text" id="invoiceBilVal">
+                <h4>Costs:</h4>
+                <input type="text" id="invoiceBilCost">
+                <h4>CP £:</h4>
+                <input type="text" id="InvCpR">
+                <h4>CP %:</h4>
+                <input type="text" id="InvCpP">
+            </div>
+        </div>
+        <div class="totalDiv">
+            <div class="borderBottom">
+                <h4>Total</h4>
+            </div>
+                <div class="dataDiv">
+                    <h4>Fees at Worked Value:</h4>
+                    <input type="text" id="totalWorkVal">
+                    <h4>Write Down %:</h4>
+                    <input type="text" id="totalWriteDown">
+                    <h4>Billed Fees:</h4>
+                    <input type="text" id="totalBilVal">
+                    <h4>Costs:</h4>
+                    <input type="text" id="totalBilCost">
+                    <h4>CP £:</h4>
+                    <input type="text" id="TotCpR">
+                    <h4>CP %:</h4>
+                    <input type="text" id="TotCpP">
+                </div>
+        </div>
+    </div>
+
+          
+
+            <% if (locals.matNumberC) { %>
+
+                <script> 
+
+                    var feeEarnerC = '<%= feeEarnerC %>';
+                    var deptC = '<%= deptC %>';
+                    var matNameC = '<%= matNameC %>';
+                    var matNumberC = '<%= matNumberC %>';
+
+                    var workfeesC = '<%= workfeesC %>';
+                    var billfeesC = '<%= billfeesC %>';
+                    var costsC = '<%= costsC %>';
+
+                    var workfeesInvoiceC = '<%= workfeesInvoiceC %>';
+                    var costsInvoiceC = '<%= costsInvoiceC %>';
+
+                </script>
+
+            <% } else {} %>
+            
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/jquery/jquery.js"></script>
+
+
+
+
+</body>
+</html>
